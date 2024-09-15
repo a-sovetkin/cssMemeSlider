@@ -89,17 +89,7 @@ body {
     .pagination-container {
         gap: 0.5rem;
     }
-
-
-    /* .slider__text-wrapper {
-        order: 1;
-    } */
-
-    /* .slider__pagination-wrapper {
-        justify-content: center;
-    } */
 }
-
 
 input {
     display: none;
