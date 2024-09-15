@@ -27,8 +27,13 @@ body {
 
 .slider {
     display: flex;
+
     width: 50vw;
-    height: calc(60vw * 0.56);
+    height: calc(50vw * 0.56);
+
+    min-width: 50vw;
+    min-height: calc(50vw * 0.56);
+
     flex-direction: column;
     gap: 1.25rem;
     overflow: hidden;
@@ -41,12 +46,30 @@ body {
     transition: transform 0.4s ease 0.2s;
 }
 
+
+ /* брейкпоинты для слайдера */
 @media screen and (max-width: 1024px) {
     .slider {
-        width: 70vw;
-        height: calc(80vw * 0.56);
+        min-width: 70vw;
+        min-height: calc(70vw * 0.56);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .slider {
+        min-width: 80vw;
+        min-height: calc(80vw * 0.56);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .slider {
+        min-width: 95vw;
+        min-height: calc(95vw * 0.56);
+    }
+}
+
+
 
 .slider__text-wrapper {
     display: flex;
