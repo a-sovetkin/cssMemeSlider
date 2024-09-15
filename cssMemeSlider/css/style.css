@@ -54,25 +54,24 @@ body {
     .slider {
         width: 83vw;
         height: calc(83vw * 0.56);
-
-        /* max-width: 40rem; */
-        /* max-height: calc(40rem * 0.56); */
-
-        min-width: 30rem;
-        min-height: calc(30rem * 0.56);
+        min-width: 18rem;
+        min-height: calc(18rem * 0.56);
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
     .slider {
-        min-width: 95vw;
-        min-height: calc(95vw * 0.56);
+        width: 83vw;
+        height: calc(83vw * 0.56);
+        min-width: 18rem;
+        min-height: calc(18rem * 0.56);
     }
 }
 
 .slider__text-wrapper {
     display: flex;
     color: #ececd7;
+    width: 100%;
 }
 
 .slider__pagination-wrapper {
@@ -81,22 +80,26 @@ body {
     height: fit-content;
 }
 
-/*
 @media screen and (max-width: 768px) {
-    .slider {
+    .pagination-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .slider,
+    .pagination-container {
+        gap: 0.5rem;
     }
 
-    .slider__text-wrapper {
+
+    /* .slider__text-wrapper {
         order: 1;
-    }
+    } */
 
-    .slider__pagination-wrapper {
+    /* .slider__pagination-wrapper {
         justify-content: center;
-    }
+    } */
 }
- */
+
 
 input {
     display: none;
@@ -164,11 +167,17 @@ input {
     opacity: 0;
 }
 
-/* @media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
     .slider__text-wrapper .text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
-} */
+}
+
+@media screen and (max-width: 375px) {
+    .slider__text-wrapper .text {
+        font-size: 0.8rem;
+    }
+}
 
 @keyframes fadeInOut {
     0% {
@@ -253,12 +262,19 @@ input {
 }
 
 /* меняем размер точек на мал экранах */
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     .pagination-dot {
-        width: 0.75rem;
-        height: 0.75rem;
+        width: 0.7rem;
+        height: 0.7rem;
     }
-} */
+}
+
+@media screen and (max-width: 375px) {
+    .pagination-dot {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+}
 
 /* состояние точек при выбранном инпуте  и  ховер на них */
 #slide1:checked ~ .pagination-container .pagination-1 > span {
